@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{ask}
+Ask.
+\newblock \url{https://it.wikipedia.org/wiki/Amplitude-shift_keying}.
+
+\bibitem{psk-constellation}
+Constellation.
+\newblock \url{https://aerospaceresearch.net/?p=825}.
+
+\bibitem{fsk}
+Fsk.
+\newblock
+  \url{http://www.rfwireless-world.com/Terminology/Advantages-and-Disadvantages-of-FSK.html}.
+
+\bibitem{digit}
+Modulazioni digitali.
+\newblock \url{http://www.digitaler-bos-funk.de/digital/digital.htm}.
+
+\bibitem{qam}
+Qam.
+\newblock
+  \url{https://www.radio-electronics.com/info/rf-technology-design/quadrature-amplitude-modulation-qam/what-is-qam-tutorial.php}.
+
+\end{thebibliography}
