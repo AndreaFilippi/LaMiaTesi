@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{ask}
 Ask.
@@ -7,6 +7,24 @@ Ask.
 \bibitem{psk-constellation}
 Constellation.
 \newblock \url{https://aerospaceresearch.net/?p=825}.
+
+\bibitem{cp}
+cyclic-prefix.
+\newblock \url{http://www.sharetechnote.com/html/Communication_OFDM.html}.
+
+\bibitem{dpsk}
+Dpsk.
+\newblock
+  \url{https://www.tutorialspoint.com/digital_communication/digital_communication_differential_phase_shift_keying.htm}.
+
+\bibitem{efficienzaSpettrale}
+Efficienza-spettrale.
+\newblock \url{https://it.wikipedia.org/wiki/Efficienza_spettrale}.
+
+\bibitem{equalizer}
+Equalizzazione.
+\newblock
+  \url{https://pdfs.semanticscholar.org/d8f6/7c4e4a42164bed115af4610d22adc78afec3.pdf}.
 
 \bibitem{fsk}
 Fsk.
@@ -17,9 +35,23 @@ Fsk.
 Modulazioni digitali.
 \newblock \url{http://www.digitaler-bos-funk.de/digital/digital.htm}.
 
+\bibitem{ofdm}
+Ofdm.
+\newblock
+  \url{http://www.revolutionwifi.net/revolutionwifi/2015/3/how-ofdm-subcarriers-work}.
+
+\bibitem{ofdm2}
+Ofdm.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Orthogonal_frequency-division_multiplexing#Orthogonality}.
+
 \bibitem{qam}
 Qam.
 \newblock
   \url{https://www.radio-electronics.com/info/rf-technology-design/quadrature-amplitude-modulation-qam/what-is-qam-tutorial.php}.
+
+\bibitem{ofdm-simboli}
+sottoportanti-ofdm.
+\newblock \url{https://www.webnews.it/2008/11/24/tecnica-ofdm/}.
 
 \end{thebibliography}
