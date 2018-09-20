@@ -8,14 +8,28 @@ Ask.
 Constellation.
 \newblock \url{https://aerospaceresearch.net/?p=825}.
 
+\bibitem{cc}
+Convolutional-coding.
+\newblock \url{http://www.tdm.uni-oldenburg.de/2004/Material/faltung.htm}.
+
 \bibitem{cp}
 cyclic-prefix.
 \newblock \url{http://www.sharetechnote.com/html/Communication_OFDM.html}.
+
+\bibitem{sdrDiagram}
+Diagramma-sdr.
+\newblock
+  \url{https://it.wikipedia.org/wiki/Software_defined_radio#/media/File:SDR_et_WF.svg}.
 
 \bibitem{dpsk}
 Dpsk.
 \newblock
   \url{https://www.tutorialspoint.com/digital_communication/digital_communication_differential_phase_shift_keying.htm}.
+
+\bibitem{doppler}
+Effetto-doppler.
+\newblock
+  \url{https://soundwavesreillymckennaaly.weebly.com/doppler-effect.html}.
 
 \bibitem{efficienzaSpettrale}
 Efficienza-spettrale.
@@ -45,10 +59,24 @@ Ofdm.
 \newblock
   \url{https://en.wikipedia.org/wiki/Orthogonal_frequency-division_multiplexing#Orthogonality}.
 
+\bibitem{ofdmWiki}
+Ofdm.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Orthogonal_frequency-division_multiplexing#Guard_interval_for_elimination_of_intersymbol_interference}.
+
+\bibitem{papr}
+Papr.
+\newblock
+  \url{http://www.techplayon.com/papr-peak-average-power-ratio-matters-power-amplifier/}.
+
 \bibitem{qam}
 Qam.
 \newblock
   \url{https://www.radio-electronics.com/info/rf-technology-design/quadrature-amplitude-modulation-qam/what-is-qam-tutorial.php}.
+
+\bibitem{sdrSoftware}
+Sdr-software.
+\newblock \url{https://www.wimo.com/elad-fdm-duo-sdr-transceiver_e.html}.
 
 \bibitem{ofdm-simboli}
 sottoportanti-ofdm.

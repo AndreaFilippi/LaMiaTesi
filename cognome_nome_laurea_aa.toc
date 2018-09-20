@@ -12,16 +12,13 @@
 \contentsline {subsection}{\numberline {1.2.4}DPSK (Differential Phase Shift Keying): }{4}
 \contentsline {subsection}{\numberline {1.2.5}QAM (Quadrature amplitude modulation): }{4}
 \contentsline {section}{\numberline {1.3}OFDM (orthogonal frequency-division multiplexing): }{4}
-\contentsline {subsection}{\numberline {1.3.1}Caratteristiche}{5}
-\contentsline {chapter}{\numberline {2}Proin rhoncus a sapien in.}{7}
-\contentsline {section}{\numberline {2.1}Cras in aliquam quam, et}{7}
-\contentsline {subsection}{\numberline {2.1.1}Sed pulvinar placerat enim, a}{7}
-\contentsline {section}{\numberline {2.2}Vivamus hendrerit imperdiet ex. Vivamus}{7}
-\contentsline {chapter}{\numberline {3}Conclusioni}{7}
-\contentsline {chapter}{Bibliografia}{8}
+\contentsline {subsection}{\numberline {1.3.1}Principi di funzionamento}{5}
+\contentsline {subsection}{\numberline {1.3.2}Propriet\IeC {\`a} e campi di utilizzo}{7}
+\contentsline {section}{\numberline {1.4}SDR (Software Defined Radio)}{8}
+\contentsline {chapter}{\numberline {2}Proin rhoncus a sapien in.}{9}
+\contentsline {section}{\numberline {2.1}Cras in aliquam quam, et}{9}
+\contentsline {subsection}{\numberline {2.1.1}Sed pulvinar placerat enim, a}{9}
+\contentsline {section}{\numberline {2.2}Vivamus hendrerit imperdiet ex. Vivamus}{9}
+\contentsline {chapter}{\numberline {3}Conclusioni}{9}
+\contentsline {chapter}{Bibliografia}{10}
 \contentsline {chapter}{\numberline {A}Titolo primo allegato}{10}
-\contentsline {section}{\numberline {A.1}Titolo}{10}
-\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{10}
-\contentsline {chapter}{\numberline {B}Titolo secondo allegato}{11}
-\contentsline {section}{\numberline {B.1}Titolo}{11}
-\contentsline {subsection}{\numberline {B.1.1}Sottotitolo}{11}
