@@ -40,6 +40,10 @@ Equalizzazione.
 \newblock
   \url{https://pdfs.semanticscholar.org/d8f6/7c4e4a42164bed115af4610d22adc78afec3.pdf}.
 
+\bibitem{FOOFDM}
+Frequencyoffsetofdm.
+\newblock \url{https://openofdm.readthedocs.io/en/latest/freq_offset.html}.
+
 \bibitem{fsk}
 Fsk.
 \newblock
@@ -74,6 +78,24 @@ Qam.
 \newblock
   \url{https://www.radio-electronics.com/info/rf-technology-design/quadrature-amplitude-modulation-qam/what-is-qam-tutorial.php}.
 
+\bibitem{brunato}
+Rsa.
+\newblock \url{https://retiavanzate.eu/}.
+
+\bibitem{rsa}
+Rsa.
+\newblock
+  \url{http://www.di-srv.unisa.it/~ads/corso-security/www/CORSO-9900/rsa/testo.htm}.
+
+\bibitem{rtlsdr}
+Rtl-immagine.
+\newblock \url{https://shyamjos.com/assets/img/noaa/rtlsdr-dongle.jpg}.
+
+\bibitem{SdrDrugs}
+Sdr-più-redditizio-della-droga.
+\newblock
+  \url{https://zeptobars.com/en/read/AD9361-SDR-Analog-Devices-DAC-ADC-65nm}.
+
 \bibitem{sdrSoftware}
 Sdr-software.
 \newblock \url{https://www.wimo.com/elad-fdm-duo-sdr-transceiver_e.html}.
@@ -81,5 +103,9 @@ Sdr-software.
 \bibitem{ofdm-simboli}
 sottoportanti-ofdm.
 \newblock \url{https://www.webnews.it/2008/11/24/tecnica-ofdm/}.
+
+\bibitem{b210}
+Usrp-b210.
+\newblock \url{https://www.ettus.com/product/details/UB210-KIT}.
 
 \end{thebibliography}
