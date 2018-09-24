@@ -13,34 +13,41 @@
 \contentsline {subsection}{\numberline {1.2.5}QAM (Quadrature amplitude modulation): }{5}
 \contentsline {chapter}{\numberline {2}OFDM (orthogonal frequency-division multiplexing): }{6}
 \contentsline {section}{\numberline {2.1}Principi di funzionamento}{6}
-\contentsline {subsection}{\numberline {2.1.1}ortogonalit\IeC {\`a} delle sottoportanti: }{6}
-\contentsline {subsection}{\numberline {2.1.2}tempi di guardia }{7}
-\contentsline {subsection}{\numberline {2.1.3}equalizzazione}{7}
-\contentsline {subsection}{\numberline {2.1.4}recupero degli errori}{8}
+\contentsline {subsection}{\numberline {2.1.1}Ortogonalit\IeC {\`a} delle sottoportanti: }{6}
+\contentsline {subsection}{\numberline {2.1.2}Tempi di guardia }{7}
+\contentsline {subsection}{\numberline {2.1.3}Equalizzazione}{7}
+\contentsline {subsection}{\numberline {2.1.4}Recupero degli errori}{8}
+\contentsline {subsubsection}{CRC (Cyclic Redundancy Check)}{8}
+\contentsline {subsubsection}{Convolutional Coding}{8}
 \contentsline {subsection}{\numberline {2.1.5}Sincronizzazione in frequenza}{8}
 \contentsline {section}{\numberline {2.2}Propriet\IeC {\`a} e campi di utilizzo}{9}
-\contentsline {chapter}{\numberline {3}SDR (Software Defined Radio)}{10}
+\contentsline {chapter}{\numberline {3}SDR (Software Defined Radio)}{11}
 \contentsline {subsection}{\numberline {3.0.1}USRP (Universal Software Radio Peripheral)}{11}
-\contentsline {subsubsection}{Ettus USRP-B210}{11}
-\contentsline {subsection}{\numberline {3.0.2}RTL-SDR}{11}
-\contentsline {chapter}{\numberline {4}GNURADIO}{11}
-\contentsline {chapter}{\numberline {5}Crittografia RSA}{13}
-\contentsline {section}{\numberline {5.1}Caratteristiche}{13}
-\contentsline {subsection}{\numberline {5.1.1}codifica asimmetrica con doppia chiave}{13}
-\contentsline {subsection}{\numberline {5.1.2}algoritmo unico}{13}
-\contentsline {subsection}{\numberline {5.1.3}chiavi intercambiabili}{13}
-\contentsline {subsection}{\numberline {5.1.4}procedimento creazione chiave monodirezionale}{13}
-\contentsline {section}{\numberline {5.2}Algoritmo}{13}
-\contentsline {subsection}{\numberline {5.2.1}generazione delle chiavi}{13}
-\contentsline {subsection}{\numberline {5.2.2}cifratura}{14}
-\contentsline {subsection}{\numberline {5.2.3}decifratura}{14}
-\contentsline {chapter}{\numberline {6}OFDM in Gnu Radio}{15}
-\contentsline {section}{\numberline {6.1}Cras in aliquam quam, et}{15}
-\contentsline {subsection}{\numberline {6.1.1}Sed pulvinar placerat enim, a}{15}
-\contentsline {section}{\numberline {6.2}Vivamus hendrerit imperdiet ex. Vivamus}{15}
-\contentsline {chapter}{\numberline {7}Conclusioni}{16}
-\contentsline {chapter}{Sitografia}{16}
-\contentsline {chapter}{\numberline {A}Titolo primo allegato}{17}
-\contentsline {section}{\numberline {A.1}Titolo}{17}
-\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{17}
-\contentsline {chapter}{\numberline {B}Titolo secondo allegato}{17}
+\contentsline {subsubsection}{Ettus USRP-B210}{12}
+\contentsline {subsection}{\numberline {3.0.2}RTL-SDR}{12}
+\contentsline {chapter}{\numberline {4}GNURADIO}{13}
+\contentsline {chapter}{\numberline {5}Crittografia RSA}{14}
+\contentsline {section}{\numberline {5.1}Caratteristiche}{14}
+\contentsline {subsection}{\numberline {5.1.1}Codifica asimmetrica con doppia chiave}{14}
+\contentsline {subsection}{\numberline {5.1.2}Algoritmo unico}{14}
+\contentsline {subsection}{\numberline {5.1.3}Chiavi intercambiabili}{14}
+\contentsline {subsection}{\numberline {5.1.4}Procedimento creazione chiave monodirezionale}{14}
+\contentsline {section}{\numberline {5.2}Algoritmo}{14}
+\contentsline {subsection}{\numberline {5.2.1}Generazione delle chiavi}{14}
+\contentsline {subsection}{\numberline {5.2.2}Cifratura}{15}
+\contentsline {subsection}{\numberline {5.2.3}Decifratura}{15}
+\contentsline {chapter}{\numberline {6}OFDM in Gnu Radio}{16}
+\contentsline {section}{\numberline {6.1}Trasmettitore}{16}
+\contentsline {subsection}{\numberline {6.1.1}Formazione pacchetti dal flusso in ingresso}{16}
+\contentsline {subsection}{\numberline {6.1.2}Codifica informazioni in Simboli}{17}
+\contentsline {subsection}{\numberline {6.1.3}Allocazione simboli sulle sottoportanti e creazione campioni per l'SDR}{17}
+\contentsline {subsection}{\numberline {6.1.4}Passaggio dati all'SDR}{17}
+\contentsline {section}{\numberline {6.2}Ricevitore}{17}
+\contentsline {subsection}{\numberline {6.2.1}Ricezione informazioni, sincronizzazione}{17}
+\contentsline {subsection}{\numberline {6.2.2}Equalizzazione e ottenimento simboli}{18}
+\contentsline {subsection}{\numberline {6.2.3}Decodifica payload e scrittura file}{18}
+\contentsline {chapter}{\numberline {7}Conclusioni}{18}
+\contentsline {chapter}{Sitografia}{19}
+\contentsline {chapter}{\numberline {A}Titolo primo allegato}{20}
+\contentsline {section}{\numberline {A.1}Titolo}{20}
+\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{20}

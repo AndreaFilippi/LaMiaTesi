@@ -12,6 +12,10 @@ Constellation.
 Convolutional-coding.
 \newblock \url{http://www.tdm.uni-oldenburg.de/2004/Material/faltung.htm}.
 
+\bibitem{crc}
+Crc.
+\newblock \url{https://it.wikipedia.org/wiki/Cyclic_redundancy_check}.
+
 \bibitem{cp}
 cyclic-prefix.
 \newblock \url{http://www.sharetechnote.com/html/Communication_OFDM.html}.
@@ -103,6 +107,10 @@ Sdr-software.
 \bibitem{ofdm-simboli}
 sottoportanti-ofdm.
 \newblock \url{https://www.webnews.it/2008/11/24/tecnica-ofdm/}.
+
+\bibitem{subcarriers}
+Subcarriers.
+\newblock \url{http://www.teletopix.org/4g-lte/lte-sub-carrier/}.
 
 \bibitem{b210}
 Usrp-b210.

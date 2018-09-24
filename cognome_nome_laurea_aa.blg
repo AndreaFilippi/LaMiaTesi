@@ -16,8 +16,10 @@ Warning--to sort, need author or key in ofdm-simboli
 Warning--to sort, need author or key in doppler
 Warning--to sort, need author or key in cp
 Warning--to sort, need author or key in equalizer
+Warning--to sort, need author or key in crc
 Warning--to sort, need author or key in cc
 Warning--to sort, need author or key in ofdmWiki
+Warning--to sort, need author or key in subcarriers
 Warning--to sort, need author or key in FOOFDM
 Warning--to sort, need author or key in papr
 Warning--to sort, need author or key in SdrDrugs
@@ -27,45 +29,45 @@ Warning--to sort, need author or key in b210
 Warning--to sort, need author or key in rtlsdr
 Warning--to sort, need author or key in brunato
 Warning--to sort, need author or key in rsa
-You've used 24 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            572 strings with 6286 characters,
-and the built_in function-call counts, 3838 in all, are:
-= -- 360
-> -- 24
+            578 strings with 6427 characters,
+and the built_in function-call counts, 4156 in all, are:
+= -- 390
+> -- 26
 < -- 0
-+ -- 24
++ -- 26
 - -- 0
-* -- 122
-:= -- 419
-add.period$ -- 48
-call.type$ -- 24
-change.case$ -- 72
+* -- 132
+:= -- 453
+add.period$ -- 52
+call.type$ -- 26
+change.case$ -- 78
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 168
-empty$ -- 553
+cite$ -- 52
+duplicate$ -- 182
+empty$ -- 599
 format.name$ -- 0
-if$ -- 961
+if$ -- 1041
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 26
 missing$ -- 0
-newline$ -- 99
+newline$ -- 107
 num.names$ -- 0
-pop$ -- 192
+pop$ -- 208
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 52
 quote$ -- 0
-skip$ -- 191
+skip$ -- 207
 stack$ -- 0
-substring$ -- 120
-swap$ -- 24
+substring$ -- 130
+swap$ -- 26
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
-warning$ -- 24
+type$ -- 104
+warning$ -- 26
 while$ -- 0
-width$ -- 26
-write$ -- 170
-(There were 24 warnings)
+width$ -- 28
+write$ -- 184
+(There were 26 warnings)

@@ -60,7 +60,7 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
 \label{sec:problem}
 \section{Principi di funzionamento}
 \begin{itemize}
-	 \item \subsection{ortogonalità delle sottoportanti: } la divisione della larghezza di banda disponibile in sezioni più piccole non è una caratteristica unica di OFDM, ciò che lo distingue è la soluzione al problema di interferenza fra i sotto canali. La soluzione classica è quella di lasciare delle piccole bande di frequenza vuote dove non si trasmette fra un canale e quello adiacente, da notare che in questo tipo di approccio si ha una allocazione inefficiente della larghezza di banda disponibile. OFDM utilizza la proprietà di ortogonalità per riuscire addirittura a sovrapporre perzialmente un canale con il successivo evitando sprechi di banda e aumentando così l' efficienza spettrale ( indica la bontà del sistema nello sfruttare in maniera più o meno efficiente la banda disponibile \cite{efficienzaSpettrale}).
+	 \item \subsection{Ortogonalità delle sottoportanti: } la divisione della larghezza di banda disponibile in sezioni più piccole non è una caratteristica unica di OFDM, ciò che lo distingue è la soluzione al problema di interferenza fra i sotto canali. La soluzione classica è quella di lasciare delle piccole bande di frequenza vuote dove non si trasmette fra un canale e quello adiacente, da notare che in questo tipo di approccio si ha una allocazione inefficiente della larghezza di banda disponibile. OFDM utilizza la proprietà di ortogonalità per riuscire addirittura a sovrapporre perzialmente un canale con il successivo evitando sprechi di banda e aumentando così l' efficienza spettrale ( indica la bontà del sistema nello sfruttare in maniera più o meno efficiente la banda disponibile \cite{efficienzaSpettrale}).
 	 La spiegazione matematica di questa tecnica è complessa e fa uso della trasformata di Fourier, è tuttavia possibile intuirne il funzionamento dall' immagine sottostante. L'immagine rappresenta la disposizione delle sotto portanti, sulle ascisse troviamo le frequenze mentre sulle ordinate l'ampiezza. Ogni picco rappresenta la presenza di un simbolo modulato sulla rispettiva portante. E' possibile notare che in questa particolare disposizione il rumore che genererebbe ogni canale all'esterno della propria banda si annulla esattamente in corrispondenza delle frequenze di trasmissione dei simboli adiacenti non creandogli disturbo. Perchè l'ortogonalità garantisca che non ci siano interferenze fra le diverse sottoportanti è necessario che il tempo di trasmissione dei simboli sia uguale in tutto il sistema, in ambienti caratterizzati da una variazione dell' attenuazione sul mezzo trasmissivo ad esempio sul doppino adsl un eventuale algoritmo finalizzato ad aumentare il throughput non potrà agire sulla velocità di trasmissione dei simboli ma sulla grandezza della costellazione utilizzata per modulare nella sottoportante (passando ad esempio da un bpsk che trasferisce un bit per simbolo a 16psk che ne trasferisce 4)). Altro requisito fondamentale che verrà ripreso nella sezione dedicata all'implementazione sul software gnuradio è la necessità di avere un ottima sincronizzazione sulla frequenza fra trasmettitore e ricevitore, le cause di una cattiva sincronizzazione possono essere varie un esempio è l'effetto Doppler causato dal movimento di un apparato rispetto all' altro durante la comunicazione, il cosiddetto multi-path per le reti wireless oppure semplici imperfezioni sul clock (generatore di frequenza) fra gli apparati.
 	 \begin{figure}[h]
 	 	\centering
@@ -73,19 +73,23 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
  			\caption{effetto Doppler \cite{doppler}}\label{fig:1}
  		\end{minipage}\hfill
  	\end{figure}
- 	 \item \subsection{tempi di guardia } OFDM può soffrire di ISI(intersymbol interference) per uno dei problemi appena esposti nella sezione precedente. Questo problema avviene quando un simbolo trasmesso arriva al ricevitore assieme al precedente facendo fallire la decodifica, per risolvere questo problema viene aggiunto un tempo detto di guardia lungo solitamente attorno ad 1/10 del simbolo. Inizialmente durante questo breve intervallo non veniva trasmesso nulla, successivamente è risultato più efficiente trasmette l' ultimo pezzo del simbolo dopo (cyclic prefix) favorendo la corretta decodifica  ricevitore.
+ 	 \item \subsection{Tempi di guardia } OFDM può soffrire di ISI(intersymbol interference) per uno dei problemi appena esposti nella sezione precedente. Questo problema avviene quando un simbolo trasmesso arriva al ricevitore assieme al precedente facendo fallire la decodifica, per risolvere questo problema viene aggiunto un tempo detto di guardia lungo solitamente attorno ad 1/10 del simbolo. Inizialmente durante questo breve intervallo non veniva trasmesso nulla, successivamente è risultato più efficiente trasmette l' ultimo pezzo del simbolo dopo (cyclic prefix) favorendo la corretta decodifica  ricevitore.
  	 \begin{figure}[h]
  	 	\centering
  	 	\includegraphics[scale=1]{cp}
  	 	\caption{cyclic guard \cite{cp}}\label{fig:1}
  	 \end{figure}
-     \item \subsection{equalizzazione} l'equalizzazione del segnale ricevuto è una procedura fondamentale per la corretta decodifica delle informazioni. L'obiettivo di questa procedura è quello di modificare il segnale ricevuto cercando di agire esattamente nel modo opposto di come è stato distorto dal canale in modo da annullarne la distorsione, per ottenere tale risultato esistono numerosi algoritmi di equalizzazione che differiscono per gli approcci diversi in relazione alle informazioni disponibili sul mezzo trasmissivo oppure alle informazioni ottenute durante la trasmissione stessa. Esistono due tipi di equalizzazione possibile uno nel dominio del tempo quindi analizzando lo scorrere dei simboli e uno nel dominio delle frequenze che analizza il comportamento del canale nelle varie sottoportanti. All'inizio di una trasmissione OFDM vengono inviati dei simboli pilota ben noti al ricevitore che li utilizza per stimare la distorsione del canale di trasmissione, il ricevitore aggiusta le proprie previsioni anche mentre sta ricevendo grazie al preambolo contenuto nei pacchetti. Da notare che l'equalizzatore assieme al segnale aumenta anche il rumore.
+     \item \subsection{Equalizzazione} l'equalizzazione del segnale ricevuto è una procedura fondamentale per la corretta decodifica delle informazioni. L'obiettivo di questa procedura è quello di modificare il segnale ricevuto cercando di agire esattamente nel modo opposto di come è stato distorto dal canale in modo da annullarne la distorsione, per ottenere tale risultato esistono numerosi algoritmi di equalizzazione che differiscono per gli approcci diversi in relazione alle informazioni disponibili sul mezzo trasmissivo oppure alle informazioni ottenute durante la trasmissione stessa. Esistono due tipi di equalizzazione possibile uno nel dominio del tempo quindi analizzando lo scorrere dei simboli e uno nel dominio delle frequenze che analizza il comportamento del canale nelle varie sottoportanti. All'inizio di una trasmissione OFDM vengono inviati dei simboli pilota ben noti al ricevitore che li utilizza per stimare la distorsione del canale di trasmissione, il ricevitore aggiusta le proprie previsioni anche mentre sta ricevendo grazie al preambolo contenuto nei pacchetti. Da notare che l'equalizzatore assieme al segnale aumenta anche il rumore.
      \begin{figure}[h]
      	\centering
      	\includegraphics[scale=0.7]{equalizer}
      	\caption{principio funzionamento equalizzatore \cite{equalizer}}\label{fig:1}
      \end{figure}
- \item \subsection{recupero degli errori} Individuare e correggere gli errori avvenuti nella trasmissione è un compito complesso. OFDM solitamente utilizza CC (Convolutional coding) per la deteminazione e la correzione dell' errore, il principio di funzionamento di questo algoritmo si basa sulla creazione di un diagramma a stati che permette di codificare non solo la sequenza di bit in ingresso ma anche la loro transizione di stato. Il rapporto fra quantità di bit in ingresso e quello in uscita è detto code rate e può variare a seconda delle ciscostanze, un code rate di 1/2 ad esempio aggiunge 1 bit ogni bit in ingresso mentre con un rapporto 4/5 viene aggiunto un bit ogni 4. Meno bit aggiunti si traduce in meno bit da inviare ma minore efficacia nella correzione d'errore.
+ \item \subsection{Recupero degli errori} Individuare e correggere gli errori avvenuti nella trasmissione è un compito complesso. Un sistema OFDM necessita la correzione di errore per essere robusto.
+ \subsubsection{CRC (Cyclic Redundancy Check)}
+ CRC è una tecnica di controllo dell' errore, il funzionamento si basa sull' aggiunta alle informazioni da controllare di un breve codice di controllo. CRC non è in grado di correggere un eventuale errore e non è adatto per verificare la correttezza delle informazioni da un eventuale manomissione. Le informazioni di controllo aggiunte da CRC al messaggio iniziale rappresentano una divisione fra il cosiddetto polinomio generatore (specifico per ogni variante CRC) e il polinomio generato dal messaggio a cui viene sottratto il resto. Anche se di complessa spiegazione questa operazione può essere interamente eseguita in hardware mediante shift register e xor  risultando molto efficiente. Il ricevitore eseguirà la divisione fra il polinomio generatore e il messaggio verificando che il resto sia nullo, se così non fosse il ricevitore è certo che sia presente almeno un errore nelle informazioni ricevute. \cite{crc}
+ 
+ \subsubsection{Convolutional Coding}OFDM può utilizzare CC (Convolutional coding) per la deteminazione e (a differenza di CRC) la correzione dell' errore, il principio di funzionamento di questo algoritmo si basa sulla creazione di un diagramma a stati che permette di codificare non solo la sequenza di bit in ingresso ma anche la loro transizione di stato. Il rapporto fra quantità di bit in ingresso e quello in uscita è detto code rate e può variare a seconda delle ciscostanze, un code rate di 1/2 ad esempio aggiunge 1 bit ogni bit in ingresso mentre con un rapporto 4/5 viene aggiunto un bit ogni 4. Meno bit aggiunti si traduce in meno bit da inviare ma minore efficacia nella correzione d'errore.
  \cite{cc}
 	 \begin{figure}[h]
 	 	\centering
@@ -97,7 +101,24 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
  E' bene puntualizzare che esiste un limite matematicamente dimostrato insuperabile alla quantità di informazioni trasferibili su un canale affetto da rumore, questo limite è detto di Shannon.
  \cite{ofdmWiki}
  \item \subsection{Sincronizzazione in frequenza}
- Come già accennato lo sfasamento in frequenza fra trasmettitore e ricevitore è un problema comune a tutte le telecomunicazioni. OFDM ne è particolarmente sensibile data la necessità di mantenere l' ortogonalità fra le sottoportanti, altrimenti cominciano fenomeni non desiderati come l'ICI (Inter Carrier Interference) oppure sfasature del segnale modulato. Le sfasature in frequenza si dividono principalmente in due tipi, la prima è detta CFO (Carrier Frequency Offset) e rappresenta la sfasatura rispetto alle sottoportanti tra trasmettitore e ricevitore mentre la seconda è nota come SFO (Sampling Frequency Offset) e indica l' errore nella frequenza di campionamento. Il problema del CFO si manifesta in una sfasatura del campionamento dei simboli riceviti e viene corretto sincronizzando il ricevitore utilizzando il preabolo (la sua lunghezza determina la precisione). L'SFO si manifesta in una sfasatura dei punti sulla costellazione e corretto utilizzando i simboli pilota sempre presenti in alcune specifiche sottoportanti OFDM. \cite{FOOFDM}
+ Lo sfasamento in frequenza fra trasmettitore e ricevitore è un problema comune a tutte le telecomunicazioni. OFDM ne è particolarmente sensibile data la necessità di mantenere l' ortogonalità fra le sottoportanti, altrimenti cominciano fenomeni non desiderati come l'ICI (Inter Carrier Interference) oppure sfasature del segnale modulato.
+ 
+ \item \textbf{tipologie di sottoportanti}
+ Le sottoportanti in OFDM sono classificabili in tre tipologie, La maggior parte sono adibite al trasporto delle informazioni, Le restanti sono utilizzate per l'invio di simboli pilota. Esiste un ultima sottoportante particolare che non trasmette nulla (nemmeno la frequenza portante) situata a metà fra tutte le altre che serve al ricevitore per sapere l'esatto centro dell' intera banda.
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.25]{subcarriers}
+ 	\caption{Tipologie sottopottanti OFDM \cite{subcarriers}}\label{fig:1}
+ \end{figure}
+ \item \textbf{trasmissione Preambolo}
+	L'invio di informazioni in OFDM è preceduto da informazioni che viengono utilizzate per la sincronizzazione dal ricevitore. Queste informazioni includono un preambolo e in alcune applicazioni un simbolo contenente alcuni parametri come il numero di simboli OFDM in arrivo.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.45]{preambolo}
+		\caption{Sequenza invio OFDM \cite{subcarriers}}\label{fig:1}
+	\end{figure}
+ 
+  Le sfasature in frequenza si dividono principalmente in due tipi, la prima è detta CFO (Carrier Frequency Offset) e rappresenta la sfasatura rispetto alle sottoportanti tra trasmettitore e ricevitore mentre la seconda è nota come SFO (Sampling Frequency Offset) e indica l' errore nella frequenza di campionamento. Il problema del CFO si manifesta in una sfasatura del campionamento dei simboli riceviti e viene corretto sincronizzando il ricevitore utilizzando il preabolo (la sua lunghezza determina la precisione). L'SFO si manifesta in una sfasatura dei punti sulla costellazione e corretto utilizzando i simboli pilota sempre presenti in alcune specifiche sottoportanti. \cite{FOOFDM}
  %\begin{figure}[h]
  %	\centering
  %	\includegraphics[scale=0.4]{FO0}
@@ -122,7 +143,8 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
 	\end{minipage}\hfill
 	\cite{FOOFDM}
 	\end{figure}
-	\item \textbf{sottoportanti pilota e dc}
+	
+	
 \label{sec:problem}
 \section{Proprietà e campi di utilizzo}
 OFDM grazie all'ortogonalità delle portanti permette di avere un ottima efficienza sull'utilizzo della banda, inoltre la scelta statica o dinamica del tipo di modulazione da utilizzare in ogni sottoportante lo rende adatto sia in situazioni dove è presente un canale molto distorcente che in casi in cui è possibile raggiungere un elevato throughput. Grazie ai tempi di guardia fra i simboli trasmessi e al prefisso ciclico (Cyclic prefix) OFDM risulta robusto contro il problema della sovrapposizione sul segnale in ricezione di componenti provenienti da segnali riflessi (multipath propagation). OFDM richiede un ottima sincronizzazione e risulta quindi sensibile all'effetto Doppler. OFDM soffre inoltre di un elevato PAPR (peak to average power ratio) causato dalla caratteristica di avere le sottoportanti in quadratura. L'ortogonalità garantisce di non avere sovrapposizioni sulla frequenza dove si trasmette un simbolo ma ciò non si verifica nelle frequenze intermedie fra una sottoportante e l'adiacente. Accade così che in particolari circostanze le sfasature fra i simboli su sottoportanti adiacenti finiscano per sommarsi creando un picco ben superiore alla media. Questo fenomeno influisce nel dimensionamento degli apparati che devono essere scelti per non saturare il segnale ma allo stesso tempo che non siano sprecati funzionando sotto alla metà della potenza.
@@ -156,7 +178,7 @@ Il costo per una scheda SDR da laboratorio si aggira dai 500 ai 2000 euro ma è 
 \end{figure}
 \item \subsection{USRP (Universal Software Radio Peripheral)} URSP è una tipologia di SDR venduta dal marchio Etthus Research pensata per essere accessibile a tutti. Alcune versioni contengono un processore su cui può essere caricato del software per funzionare in autonomia. Sono disponibili anche modelli con una scheda ethernet integrata per il controllo remoto attraverso una rete locale o remota. Gli USRP permettono la trasmissione e la ricezione contemporaneamente e dispongono di un ampio range di frequenze che varia in relazione al modello ma è di gran lunga più elevato rispetto agli sdr-rtl. Le schede USRP sono utilizzabili con il driver UHD disponibile come due blocchi uno per la ricezione ed uno per la trasmissione pronti per essere integrati nel proprio flusso su GNURadio.
 \subsubsection{Ettus USRP-B210}
-Questo modello del costo di 750 euro in dotazione ai laboratori dell' università permette di variare la frequenza da 70MHz a 6GHz e raggiungere una frequenza di campionamento di 56MHz. Supporta MIMO in full-duplex
+Questo modello del costo di 1100 euro in dotazione ai laboratori dell' università permette di variare la frequenza da 70MHz a 6GHz e raggiungere una frequenza di campionamento di 56MHz. Supporta MIMO in full-duplex
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=2]{B210}
@@ -188,16 +210,16 @@ l'algoritmo RSA (Rivest–Shamir–Adleman) è un algoritmo per la criptazione a
  
 \section{Caratteristiche}
 \begin{itemize}
-\item \subsection{codifica asimmetrica con doppia chiave} Le due chiavi sono dette privata e pubblica e vengono generate dallo stesso dispositivo, poi viene pubblicata solo quella pubblica. RSA è un algoritmo a chiave asimmetrica che utilizza quindi due chiavi distinte per la procedura di codifica e decodifica, a differenza degli algoritmi a chiave privata condivisa in rsa la chiave privata è posseduta solo da uno dei due soggetti della comunicazione rendendone più difficile l'ottenimento da parte di un eventuale attaccante.\cite{brunato}
-\item \subsection{algoritmo unico}
+\item \subsection{Codifica asimmetrica con doppia chiave} Le due chiavi sono dette privata e pubblica e vengono generate dallo stesso dispositivo, poi viene pubblicata solo quella pubblica. RSA è un algoritmo a chiave asimmetrica che utilizza quindi due chiavi distinte per la procedura di codifica e decodifica, a differenza degli algoritmi a chiave privata condivisa in rsa la chiave privata è posseduta solo da uno dei due soggetti della comunicazione rendendone più difficile l'ottenimento da parte di un eventuale attaccante.\cite{brunato}
+\item \subsection{Algoritmo unico}
 RSA utilizza lo stesso algoritmo per la codifica e la decodifica delle informazioni.\cite{brunato}
-\item \subsection{chiavi intercambiabili}
+\item \subsection{Chiavi intercambiabili}
 E' possibile utilizzare le chiavi nell'ordine preferito, ad esempio durante l'invio di un messaggio il trasmettitore lo codificherà con la chiave pubblica del ricevitore mentre per le firme digitali il trasmettitore cripterà un hash del messaggio con la propria chiave privata permettendo al ricevitore di verificare l'identità.\cite{brunato}
-\item \subsection{procedimento creazione chiave monodirezionale} E' computazionalmente semplice generare la chiave pubblica partendo da quella privata mentre il contrario è proibitivo. Non è matematicamente dimostrata l'impossibilità della scoperta di un algoritmo che renda la procedura inversa efficiente.\cite{brunato}
+\item \subsection{Procedimento creazione chiave monodirezionale} E' computazionalmente semplice generare la chiave pubblica partendo da quella privata mentre il contrario è proibitivo. Non è matematicamente dimostrata l'impossibilità della scoperta di un algoritmo che renda la procedura inversa efficiente.\cite{brunato}
 \end{itemize}
 
 \section{Algoritmo} 
-\subsection{generazione delle chiavi}
+\subsection{Generazione delle chiavi}
 Il primo passo consiste nel generare la chiave privata e quella pubblica. Tutta la seguente procedura viene effettuata solo su un dispositivo.
 \begin{itemize}
 	\item vengono scelti due numeri primi molto grandi con lunghezza simile e ne viene eseguita il prodotto \( n = p*q \), n sarà il modulo utilizzato nell' algoritmo di codifica/decodifica
@@ -206,9 +228,9 @@ Il primo passo consiste nel generare la chiave privata e quella pubblica. Tutta 
 	\item viene calcolato \(d = e^{-1} \, mod \, f(n)\) utilizzando l'algoritmo di euclide
 \end{itemize}
 La chiave pubblica sarà formata dalla coppia (e,n) mentre quella privata (d,n). \cite{rsa}
-\subsection{cifratura} La cifratura verrà eseguita dal mittente utilizzando la chiave pubblica resa nota dal destinatario (e,n) calcolando \(C = M^e \, mod \, n\).
+\subsection{Cifratura} La cifratura verrà eseguita dal mittente utilizzando la chiave pubblica resa nota dal destinatario (e,n) calcolando \(C = M^e \, mod \, n\).
 \cite{rsa}
-\subsection{decifratura} La decifratura verrà eseguita dal destinatario con la propria chiave privata (d,n) decodificando il messaggio \(M = C^d \, mod \,  n\).
+\subsection{Decifratura} La decifratura verrà eseguita dal destinatario con la propria chiave privata (d,n) decodificando il messaggio \(M = C^d \, mod \,  n\).
 \cite{rsa}
 
 

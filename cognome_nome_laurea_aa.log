@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.16)  23 SEP 2018 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.16)  24 SEP 2018 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,10 +199,16 @@ LaTeX Warning: Label `fig:1' multiply defined.
 LaTeX Warning: Label `fig:1' multiply defined.
 
 
+LaTeX Warning: Label `sec:problem' multiply defined.
+
+
 LaTeX Warning: Label `fig:1' multiply defined.
 
 
-LaTeX Warning: Label `sec:problem' multiply defined.
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:1' multiply defined.
 
 
 LaTeX Warning: Label `fig:1' multiply defined.
@@ -479,164 +485,248 @@ Package pdftex.def Info: ./images/equalizer.png used on input line 85.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/ccDiagram.png, id=51, 378.41376pt x 470.75874pt>
+[7 <./images/ofdm-simboli.png> <./images/doppler.png> <./images/cp.png>]
+<./images/ccDiagram.png, id=55, 378.41376pt x 470.75874pt>
 File: ./images/ccDiagram.png Graphic file (type png)
 
 <use ./images/ccDiagram.png>
-Package pdftex.def Info: ./images/ccDiagram.png used on input line 92.
+Package pdftex.def Info: ./images/ccDiagram.png used on input line 96.
 (pdftex.def)             Requested size: 151.36281pt x 188.30016pt.
 
-<./images/ccTable.png, id=52, 592.2125pt x 236.885pt>
+<./images/ccTable.png, id=56, 592.2125pt x 236.885pt>
 File: ./images/ccTable.png Graphic file (type png)
 
 <use ./images/ccTable.png>
-Package pdftex.def Info: ./images/ccTable.png used on input line 93.
+Package pdftex.def Info: ./images/ccTable.png used on input line 97.
 (pdftex.def)             Requested size: 236.8808pt x 94.75232pt.
- [7 <./images/ofdm-simboli.png> <./images/doppler.png> <./images/cp.png>] [8 <.
-/images/equalizer.png> <./images/ccDiagram.png> <./images/ccTable.png>] <./imag
-es/FO0.png, id=60, 578.16pt x 433.62pt>
-File: ./images/FO0.png Graphic file (type png)
-
-<use ./images/FO0.png>
-Package pdftex.def Info: ./images/FO0.png used on input line 112.
-(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
-
-Overfull \hbox (22.55156pt too wide) in paragraph at lines 112--113
-[][] 
- []
-
-<./images/FO1.png, id=61, 578.16pt x 433.62pt>
-File: ./images/FO1.png Graphic file (type png)
- <use ./images/FO1.png>
-Package pdftex.def Info: ./images/FO1.png used on input line 116.
-(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
-
-Overfull \hbox (22.55156pt too wide) in paragraph at lines 116--117
-[][] 
- []
-
-<./images/FO2.png, id=62, 578.16pt x 433.62pt>
-File: ./images/FO2.png Graphic file (type png)
- <use ./images/FO2.png>
-Package pdftex.def Info: ./images/FO2.png used on input line 120.
-(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
-
-Overfull \hbox (22.55156pt too wide) in paragraph at lines 120--121
-[][] 
- []
-
-[9 <./images/FO0.png> <./images/FO1.png> <./images/FO2.png>]
-Capitolo 3.
-<./images/sdrDiagram.png, id=69, 803.0pt x 562.1pt>
-File: ./images/sdrDiagram.png Graphic file (type png)
-
-<use ./images/sdrDiagram.png>
-Package pdftex.def Info: ./images/sdrDiagram.png used on input line 149.
-(pdftex.def)             Requested size: 264.99081pt x 185.49358pt.
-
-Overfull \hbox (23.14238pt too wide) in paragraph at lines 149--150
-[][] 
- []
-
-<./images/sdrSoftware.jpg, id=70, 1027.84pt x 602.25pt>
-File: ./images/sdrSoftware.jpg Graphic file (type jpg)
-
-<use ./images/sdrSoftware.jpg>
-Package pdftex.def Info: ./images/sdrSoftware.jpg used on input line 153.
-(pdftex.def)             Requested size: 205.56436pt x 120.44786pt.
-
-Overfull \hbox (12.08858pt too wide) in paragraph at lines 153--154
-[][] 
- []
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 154--154
-[]\OT1/cmr/m/n/10.95 Figura 3.2: Soft-ware ge-ne-ri-co per l
- []
-
-[10 <./images/sdrDiagram.png> <./images/sdrSoftware.jpg>]
-<./images/B210.png, id=75, 156.585pt x 121.8954pt>
-File: ./images/B210.png Graphic file (type png)
- <use ./images/B210.png>
-Package pdftex.def Info: ./images/B210.png used on input line 162.
-(pdftex.def)             Requested size: 313.16922pt x 243.79019pt.
-
-<./images/rtlsdr.jpg, id=76, 307.1475pt x 216.81pt>
-File: ./images/rtlsdr.jpg Graphic file (type jpg)
- <use ./images/rtlsdr.jpg>
-Package pdftex.def Info: ./images/rtlsdr.jpg used on input line 170.
-(pdftex.def)             Requested size: 215.00177pt x 151.76596pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<./images/subcarriers.png, id=57, 944.52875pt x 221.82875pt>
+File: ./images/subcarriers.png Graphic file (type png)
+
+<use ./images/subcarriers.png>
+Package pdftex.def Info: ./images/subcarriers.png used on input line 110.
+(pdftex.def)             Requested size: 236.1316pt x 55.45705pt.
+ [8 <./images/equalizer.png>]
+<./images/preambolo.png, id=61, 536.0025pt x 70.2625pt>
+File: ./images/preambolo.png Graphic file (type png)
+
+<use ./images/preambolo.png>
+Package pdftex.def Info: ./images/preambolo.png used on input line 117.
+(pdftex.def)             Requested size: 241.1989pt x 31.61781pt.
+ <./images/FO0.png, id=62, 578.16pt x 433.62pt>
+File: ./images/FO0.png Graphic file (type png)
+
+<use ./images/FO0.png>
+Package pdftex.def Info: ./images/FO0.png used on input line 133.
+(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
+
+Overfull \hbox (22.55156pt too wide) in paragraph at lines 133--134
+[][] 
+ []
+
+<./images/FO1.png, id=63, 578.16pt x 433.62pt>
+File: ./images/FO1.png Graphic file (type png)
+ <use ./images/FO1.png>
+Package pdftex.def Info: ./images/FO1.png used on input line 137.
+(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
+
+Overfull \hbox (22.55156pt too wide) in paragraph at lines 137--138
+[][] 
+ []
+
+<./images/FO2.png, id=64, 578.16pt x 433.62pt>
+File: ./images/FO2.png Graphic file (type png)
+ <use ./images/FO2.png>
+Package pdftex.def Info: ./images/FO2.png used on input line 141.
+(pdftex.def)             Requested size: 167.6621pt x 125.74657pt.
+
+Overfull \hbox (22.55156pt too wide) in paragraph at lines 141--142
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./images/ccDiagram.png> <./images/ccTable.png> <./images/subcarriers.png> <
+./images/preambolo.png>]
+Capitolo 3.
+<./images/sdrDiagram.png, id=68, 803.0pt x 562.1pt>
+File: ./images/sdrDiagram.png Graphic file (type png)
+
+<use ./images/sdrDiagram.png>
+Package pdftex.def Info: ./images/sdrDiagram.png used on input line 171.
+(pdftex.def)             Requested size: 264.99081pt x 185.49358pt.
+
+Overfull \hbox (23.14238pt too wide) in paragraph at lines 171--172
+[][] 
+ []
+
+<./images/sdrSoftware.jpg, id=69, 1027.84pt x 602.25pt>
+File: ./images/sdrSoftware.jpg Graphic file (type jpg)
+
+<use ./images/sdrSoftware.jpg>
+Package pdftex.def Info: ./images/sdrSoftware.jpg used on input line 175.
+(pdftex.def)             Requested size: 205.56436pt x 120.44786pt.
+
+Overfull \hbox (12.08858pt too wide) in paragraph at lines 175--176
+[][] 
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 176--176
+[]\OT1/cmr/m/n/10.95 Figura 3.2: Soft-ware ge-ne-ri-co per l
+ []
+
+
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [10 <./images/FO0.png> <./images/FO1.png> <./images/FO2.png>] [11 <./images/sd
+rDiagram.png> <./images/sdrSoftware.jpg>]
+<./images/B210.png, id=81, 156.585pt x 121.8954pt>
+File: ./images/B210.png Graphic file (type png)
+ <use ./images/B210.png>
+Package pdftex.def Info: ./images/B210.png used on input line 184.
+(pdftex.def)             Requested size: 313.16922pt x 243.79019pt.
+
+<./images/rtlsdr.jpg, id=82, 307.1475pt x 216.81pt>
+File: ./images/rtlsdr.jpg Graphic file (type jpg)
+ <use ./images/rtlsdr.jpg>
+Package pdftex.def Info: ./images/rtlsdr.jpg used on input line 192.
+(pdftex.def)             Requested size: 215.00177pt x 151.76596pt.
+
 Capitolo 4.
-<./images/GnuGUI.png, id=77, 956.57375pt x 580.1675pt>
+<./images/GnuGUI.png, id=83, 956.57375pt x 580.1675pt>
 File: ./images/GnuGUI.png Graphic file (type png)
 
 <use ./images/GnuGUI.png>
-Package pdftex.def Info: ./images/GnuGUI.png used on input line 178.
+Package pdftex.def Info: ./images/GnuGUI.png used on input line 200.
 (pdftex.def)             Requested size: 382.62271pt x 232.06288pt.
- [11 <./images/B210.png>] [12 <./images/rtlsdr.jpg> <./images/GnuGUI.png>]
+ [12 <./images/B210.png> <./images/rtlsdr.jpg>]
+[13 <./images/GnuGUI.png>]
 Capitolo 5.
-[13] [14]) (./capitolo2.tex
+[14] [15]) (./capitolo2.tex
 Capitolo 6.
+<./images/Tx1.png, id=99, 1055.945pt x 244.915pt>
+File: ./images/Tx1.png Graphic file (type png)
+ <use ./images/Tx1.png>
+Package pdftex.def Info: ./images/Tx1.png used on input line 12.
+(pdftex.def)             Requested size: 422.37051pt x 97.96425pt.
+
+<./images/Tx2.png, id=100, 931.48pt x 170.6375pt>
+File: ./images/Tx2.png Graphic file (type png)
+ <use ./images/Tx2.png>
+Package pdftex.def Info: ./images/Tx2.png used on input line 19.
+(pdftex.def)             Requested size: 372.5854pt x 68.25378pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./images/Tx1.png>] <./images/Tx3.png, id=104, 1015.795pt x 191.71625pt>
+File: ./images/Tx3.png Graphic file (type png)
+
+<use ./images/Tx3.png>
+Package pdftex.def Info: ./images/Tx3.png used on input line 26.
+(pdftex.def)             Requested size: 406.3108pt x 76.68513pt.
+ <./images/Tx4.png, id=105, 601.24625pt x 308.15125pt>
+File: ./images/Tx4.png Graphic file (type png)
+
+<use ./images/Tx4.png>
+Package pdftex.def Info: ./images/Tx4.png used on input line 34.
+(pdftex.def)             Requested size: 240.49423pt x 123.2583pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images/Rx1.png, id=106, 1275.76625pt x 472.76625pt>
+File: ./images/Rx1.png Graphic file (type png)
+ <use ./images/Rx1.png>
+Package pdftex.def Info: ./images/Rx1.png used on input line 45.
+(pdftex.def)             Requested size: 510.29747pt x 189.10315pt.
+
+Overfull \hbox (26.6006pt too wide) in paragraph at lines 45--46
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./images/Tx2.png> <./images/Tx3.png>]
+<./images/Rx2.png, id=111, 1175.39125pt x 381.425pt>
+File: ./images/Rx2.png Graphic file (type png)
+ <use ./images/Rx2.png>
+Package pdftex.def Info: ./images/Rx2.png used on input line 52.
+(pdftex.def)             Requested size: 470.14818pt x 152.56729pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images/Rx3.png, id=112, 1160.335pt x 162.6075pt>
+File: ./images/Rx3.png Graphic file (type png)
+ <use ./images/Rx3.png>
+Package pdftex.def Info: ./images/Rx3.png used on input line 58.
+(pdftex.def)             Requested size: 464.12578pt x 65.04184pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./capitolo3.tex
 Capitolo 7.
-
+) (./cognome_nome_laurea_aa.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
-(./cognome_nome_laurea_aa.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 25--28
+ [18 <./images/Tx4.png> <./images/Rx1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\OT1/cmr/m/n/10.95 Dpsk.  $\OT1/cmtt/m/n/10.95 https : / / www . tutorialspoi
 nt . com / digital _ communication / digital _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
 []\OT1/cmr/m/n/10.95 Equalizzazione.  $\OT1/cmtt/m/n/10.95 https : / / pdfs . s
 emanticscholar . org / d8f6 /
  []
 
 
-Overfull \hbox (24.36574pt too wide) in paragraph at lines 48--51
+Overfull \hbox (24.36574pt too wide) in paragraph at lines 52--55
 []\OT1/cmr/m/n/10.95 Fsk.  $\OT1/cmtt/m/n/10.95 http : / / www . rfwireless-[]w
 orld . com / Terminology / Advantages-[]and-[]Disadvantages-[]of-[]FSK .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--60
+Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\OT1/cmr/m/n/10.95 Ofdm.  $\OT1/cmtt/m/n/10.95 http : / / www . revolutionwif
 i . net / revolutionwifi / 2015 / 3 /
  []
 
-
-Overfull \hbox (34.15613pt too wide) in paragraph at lines 72--75
+[19 <./images/Rx2.png> <./images/Rx3.png>]
+Overfull \hbox (34.15613pt too wide) in paragraph at lines 76--79
 []\OT1/cmr/m/n/10.95 Papr.  $\OT1/cmtt/m/n/10.95 http : / / www . techplayon . 
 com / papr-[]peak-[]average-[]power-[]ratio-[]matters-[]power-[]amplifier/$\OT1
 /cmr/m/n/10.95 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 []\OT1/cmr/m/n/10.95 Qam.  $\OT1/cmtt/m/n/10.95 https : / / www . radio-[]elect
 ronics . com / info / rf-[]technology-[]design /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 []\OT1/cmr/m/n/10.95 Sdr-pi^^Ru-redditizio-della-droga.  $\OT1/cmtt/m/n/10.95 h
 ttps : / / zeptobars . com / en / read /
  []
 
-[16]) (./allegati.tex
+) (./allegati.tex
 Appendice A.
 Appendice B.
 
-Underfull \vbox (badness 2990) has occurred while \output is active []
+Underfull \vbox (badness 4454) has occurred while \output is active []
 
- [17])
+ [20])
 (./cognome_nome_laurea_aa.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -647,13 +737,13 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 83 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4513 strings out of 493029
- 61479 string characters out of 6136234
- 143574 words of memory out of 5000000
- 7928 multiletter control sequences out of 15000+600000
+ 4557 strings out of 493029
+ 62348 string characters out of 6136234
+ 143549 words of memory out of 5000000
+ 7963 multiletter control sequences out of 15000+600000
  10880 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,33p,1834b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,33p,1834b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -668,10 +758,10 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on cognome_nome_laurea_aa.pdf (19 pages, 1299722 bytes).
+Output written on cognome_nome_laurea_aa.pdf (22 pages, 1683895 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
