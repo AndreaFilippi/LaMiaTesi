@@ -65,7 +65,7 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
 	 \begin{figure}[h]
 	 	\centering
 		\begin{minipage}[b]{.5\columnwidth}
-	 		\includegraphics[scale=0.9]{ofdm-simboli}
+	 		\includegraphics[scale=0.6]{ofdm-simboli}
 	 		\caption{ortogonalità sottoportanti OFDM \cite{ofdm-simboli}}\label{fig:1}
  		\end{minipage}\hfill
  		\begin{minipage}[b]{.5\columnwidth}
@@ -111,7 +111,7 @@ OFDM è una tecnica di codifica digitale su portanti multiple, su ogni sotto por
  	\caption{Tipologie sottopottanti OFDM \cite{subcarriers}}\label{fig:1}
  \end{figure}
  \item \textbf{trasmissione Preambolo}
-	L'invio di informazioni in OFDM è preceduto da informazioni che viengono utilizzate per la sincronizzazione dal ricevitore. Queste informazioni includono un preambolo e in alcune applicazioni un simbolo contenente alcuni parametri come il numero di simboli OFDM in arrivo.
+	L'invio di informazioni in OFDM è preceduto da informazioni che vengono utilizzate per la sincronizzazione dal ricevitore. Queste informazioni includono un preambolo e in alcune applicazioni un simbolo contenente alcuni parametri come il numero di simboli OFDM in arrivo.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.45]{preambolo}
@@ -186,7 +186,7 @@ Questo modello del costo di 1100 euro in dotazione ai laboratori dell' universit
 \end{figure}
 
 
-\item \subsection{RTL-SDR} Questa particolare tipologia di SDR sono i più economici presenti sul mercato, vengono venduti come decoder per lo standard DVB-T della televisione digitale e per DAB e FM della radio. Utilizzando driver alternativi è possibile ricevere un flusso di campionamenti dalla scheda. Questa tipologia di SDR è solo in grado di ricevere il segnale, inoltre presenta limitazioni sia sulla frequenza di ricezione(<2GHz) che sulla frequenza di campionamento (<3MHz).
+\item \subsection{RTL-SDR} Questa particolare tipologia di SDR sono i più economici presenti sul mercato, vengono venduti come decoder per lo standard DVB-T della televisione digitale e per DAB e FM della radio. Utilizzando driver alternativi è possibile ricevere un flusso di campionamenti dalla scheda. Questa tipologia di SDR è solo in grado di ricevere il segnale, inoltre presenta limitazioni sia sulla frequenza di ricezione(minore di 2GHz) che sulla frequenza di campionamento (minore di 2MHz per una lettura affidabile, fino a 3Mhz).
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.7]{rtlsdr}
@@ -195,11 +195,6 @@ Questo modello del costo di 1100 euro in dotazione ai laboratori dell' universit
 
 \chapter{GNURADIO}
 GNU Radio è una piattaforma gratis e open-source per lo sviluppo di codice finalizzato all'implementazione di software radio, lo sviluppo può essere eseguito sia utilizzando schede hardware esterne oppure simulando lo scenario virtualmente. Il progetto GnuRadio è nato nel 2001 con l'idea di portare il concetto di free-software anche nel mondo delle Software Defined Radios visto che in precedenza questo settore era dominato solo da software proprietari. Attualmente è molto utilizzato sia in ambito accademico che commerciale, negli ultimi anche nel mondo hobbistico. Lo sviluppo in GnuRadio consiste nella disposizione di una serie di blocchi ciascuno dei quali svolge un operazione ben precisa, il collegamento fra i blocchi è monodirezionale e rappresenta il flusso delle informazioni dalla sorgente al pozzo finale.
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.4]{GnuGUI}
-	\caption{Interfaccia grafica GNURadio con un esempio di flusso}\label{fig:1}
-\end{figure}
 
  Il programma uffuciale dispone di molti moduli per l' elaborazione delle informazioni e l' interazione esterna, tuttavia è possibile creare un proprio blocco da inserire nel flusso in linguaggio python oppure C++. Per creare un blocco personalizzato GnuRadio mette a disposizione pyBOMBS il cui compito è quello di preparare l'ambiente per lo sviluppo e l'integrazione del blocco scaricando e configurando le librerie necessarie senza che l'utente debba preoccuparsene.
  Per la creazione di tutti i file necessari per il funzionamento di un blocco viene fornita l'utility gr\_modtool che attraverso il terminale chiede all' utente i parametri necessari. Un modulo Gnuradio deve possedere delle caratteristiche per il funzionamento. Ogni blocco deve specificare che tipologia di valori si aspetta in ingresso ed in uscita(Int, Float, Complex, ecc.), quanti ingressi e uscite fornirà, la lista dei parametri da richiedere all'utente per l'utilizzo e il rapporto fra il numero di campioni in ingresso e quello in uscita. I blocchi dunque devono avere un rapporto costante fra input e output rappresentato da una costante. gr\_modtool può creare se lo sviluppatore lo desidera un file python per il testing (Quality assurance), eseguendo il testing viene simulato un semplice diagramma come se fosse stato creato nell'ambiente grafico, questo diagramma è personalizzabile e permette di aggiungere tutti i blocchi necessari. Solitamente è sufficiemnte avere un diagramma composto da tre blocchi: il primo per fornire le informazioni al blocco di test, il blocco di test stesso ed infine un blocco che ritorna i risultati ottenuti permettendo al codice di confrontarli con quelli desiderati specificati dal programmatore.

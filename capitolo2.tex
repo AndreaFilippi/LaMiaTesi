@@ -1,8 +1,8 @@
 \chapter{OFDM in Gnu Radio}
 \label{cha:789}
-La prima parte del lavoro svolto è consistita nell'implementazione di OFDM nell'ambiente GnuRadio. Il funzionamento di OFDM necessita di vari meccanismi complessi come l'assegnazione di informazioni alle sottoportanti, le correzioni in frequenza, l'equalizzazione e la correzione d'errore come precedentemente spiegato nella parte teorica. Lo svolgimento di queste operazioni sono rese possibili dalla presenza sia di blocchi generici utili ad esempio per la correzione d'errore che di blocchi disponibili specificamente per l'implementazione di OFDM. Per una comunicazione standard OFDM in Gnuradio non è necessaria la scrittura di algoritmi eventualmente importabili sotto forma di blocchi personalizzati, il lavoro consiste nel collegamento e nella configurazione dei parametri al fine di farli comunicare nella maniera corretta.
+La prima parte del lavoro svolto è consistita nell'implementazione di OFDM nell'ambiente GnuRadio. Il funzionamento di OFDM necessita di vari meccanismi complessi come l'assegnazione di informazioni alle sottoportanti, le correzioni in frequenza, l'equalizzazione e la correzione d'errore come precedentemente spiegato nella parte teorica. Lo svolgimento di queste operazioni sono rese possibili dalla presenza sia di blocchi generici utili ad esempio per la correzione d'errore che di blocchi disponibili specificamente per l'implementazione di OFDM. Per una comunicazione standard OFDM in Gnuradio non è necessaria la scrittura di algoritmi, il lavoro consiste nel collegamento e nella configurazione dei parametri al fine di fare comunicare tutto nella maniera corretta.
 La comunicazione è divisa in due parti, una per la trasmissione che ha il compito di generare campioni per il driver dell'usrp-sdr ed una per la ricezione che partendo dai campionamenti effettuati dall'rtl-sdr decodifica le informazioni. Di seguito verranno documentate parte per parte tutte le fasi necessarie.
-
+E' stato scelto di trasferire un file audio in formato wma perchè non effettuando compressioni non viene influenzato dalla mancanza di campionamenti. L'unico problema si verifica quando i campioni persi fanno parte della piccola sezione riservata ai metadati. Un pacchetto perso risulterà in circa mezzo millisecondo di audio mancante. La frequenza scelta per la trasmissione è 915Mhz che risulta disponibile per uso civile \cite{frequenze}, la scelta non ha potuto comprendere 2.4ghz e 5ghz visto che l'Sdr economico utilizzato in ricezione arriva a massimo 2Ghz.
  \section{Trasmettitore}
  La trasmissione è composta da quattro sezioni principali connesse fra loro.
  \begin{itemize}
@@ -45,20 +45,170 @@ L'ultima operazione consiste nel passare il simbolo OFDM al driver dell'SDR conf
  		\includegraphics[scale=0.4]{Rx1}
  		\caption{}
  	\end{figure}
- Questa prima sezione del ricevitore ha il compito di leggere i campionamenti forniti dal driver per l'rtl-sdr e ottenere le informazioni nuovamente divise fra header e payload. Il blocco centrale di questa sezione è senzadubbio "Header/payload Demux" che ha il compito di dividere i campionamenti di header da quelli di payload per poi poter essere analizzati. I campionamenti sono forniti in forma complessa (I/Q) e rappresentano l'ampiezza in del segnale in quell'istante ma anche l' andamento della funzione che lo ha generato. 
+ Questa prima sezione del ricevitore ha il compito di leggere i campionamenti forniti dal driver per l'rtl-sdr e ottenere le informazioni nuovamente divise fra header e payload. Il blocco centrale di questa sezione è senzadubbio "Header/payload Demux" che ha proprio questo compito strettamente necessario per poi poter essere analizzati in seguito. I campionamenti sono forniti in forma complessa (I/Q) e rappresentano l'ampiezza del segnale in quell'istante ma anche l' andamento della funzione che lo ha generato. Il processo di ricezione ha inizio quando il blocco "Schmidl \& Cox OFDM sync" individua l'inizio della trasmissione inviando un segnale di comando (trigger) verso il demuxer. Il suo funzionamento è molto complesso e permette assieme al blocco "Frequency mod" la sincronizzazione necessaria per l'inizio della lettura. Il blocco "Header/payload Demux" inoltra sulla prima uscita (Header Stream) i primi 3 simboli OFDM (composti da 64 campioni ognuno) e rimane in attesa fino a che non gli vengono fornite le informazioni contenute nell'header. L'analisi dei campioni contenenti le informazioni sul payload verrà approfondita nella sezione successiva, per ora è importante notare che "Header/payload Demux" riceve queste informazioni sul terzo ingresso. A questo punto il demuxer grazie alle informazioni dell' header può inoltrare il numero corretto di simboli OFDM sulla seconda uscita (Payload Stream).
  	\item \subsection{Equalizzazione e ottenimento simboli}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[scale=0.4]{Rx2}
  		\caption{}
  	\end{figure}
+ 	L' obiettivo di questa sezione è quello di ottenere dai campionamenti ricevuti le costellazioni delle sottoportanti OFDM. La procedura consiste nell' applicazione della trasformata di Fourier veloce per passare al dominio delle frequenze. Nella decodifica dell' header è presente il blocco "Channel Estimator" che sfruttando i primi due sync\_words ha lo scopo di ottenere informazioni di partenza sulle caratteristiche di sfasatura CFO (Carrier Frequancy Offset) e di attenuazione canale. Il blocco successivo "OFDM Frame Equalizer" utilizza queste informazioni per effettuare la prima equalizzazione, le informazioni sulle caratteristiche del canale vengono poi aggiornate alla ricezione di ogni simbolo OFDM grazie ai simboli pilota contenuti nelle apposite sottoportanti. L' ultima operazione della sezione viene svolta dal blocco "OFDM Serializer" e consiste nell'invertire il lavoro svolto dall'allocatore nella fase di trasmissione al fine di ottenere un flusso contente solo i punti delle costellazioni che contengono informazioni in modo ordinato e raggruppati secondo pacchetto di trasmissione (mediante l'aggiunta di un tag). 
+ 	
  	\item \subsection{Decodifica payload e scrittura file}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[scale=0.4]{Rx3}
  		\caption{}
  	\end{figure}
+ 	Il blocco "Constellation Decoder" effettua la decodifica dei numeri complessi ricevuti. Le informazioni ottenute dalla decodifica di una singola costellazione in qpsk sono rappresentabili in 2 bit, è dunque necessario l'utilizzo del blocco "Repack bits" che preleva solo i due bit significativi di quattro decodifiche successive per completare un byte. Le informazioni ottenute contengono ancora informazioni sul blocco di appartenenza, "Stream CRC32" esegue la verifica pacchetto per pacchetto scartandolo se contenente errori. In conclusione il blocco "File Sink" si occupa della scrittura su file completando il processo di ricezione.
  \end{itemize}
-
-
+\section{Testing}
+ Sono stati effettuati alcuni test per osservare il comportamento in un ambiente reale. DA FARE!!! (decibel non calibrati, sdr con poco range su frequenza e sample rate)
+ 
+ \begin{figure}
+ 	\centering
+ 	\begin{minipage}[b]{.45\columnwidth}
+ 	\begin{tikzpicture}[scale=0.8,line width=1pt]
+ \begin{axis}[
+ ytick={0,10,20,30,40,50,60,70,80,90,100},
+ %xtick={0,3.84,5.76,11.52,15.36,23.4},
+ %xtick={-110},
+ %title = bandwidth rapportato al throughput utente nelle varie TM,
+ title = Dati ricevuti in base alla potenza del segnale ricevuto,
+ grid style=dashed,
+ xlabel={Rx [dbm]},
+ ylabel={\% Dati ricevuti},
+ legend style={at={(0.7,0.02)},anchor=south west}
+ ]
+ %tm1
+ \addplot[
+ color=blue,
+ mark=x]
+ table[x=power,y=BER] {
+ 	power BER
+ 	-71 +93.9
+ 	-74 +97
+ 	-75 +97.2
+ 	-80 +96.7
+ 	-84 +96.4
+ 	-89 +95.2
+ 	-94 +85.9
+ 	-95 +76.3
+ 	-97 +55.6
+ 	-100 +5.0
+ }; 
+ \end{axis}
+ \end{tikzpicture}
+\end{minipage}
+ \centering
+ \begin{minipage}[b]{.45\columnwidth}
+  \begin{tikzpicture}[scale=0.8,line width=1pt]
+ \begin{axis}[
+ ytick={0,1,2,3,4,5},
+ %xtick={0,3.84,5.76,11.52,15.36,23.4},
+ %xtick={-110},
+ %title = bandwidth rapportato al throughput utente nelle varie TM,
+ title = Qualità suono in relazione alla quantità di dati,
+ grid style=dashed,
+ xlabel={\% dati persi},
+ ylabel={Qualità suono},
+ legend style={at={(0.7,0.02)},anchor=south west}
+ ]
+ %tm1
+ \addplot[
+ color=blue,
+ mark=x]
+ table[x=power,y=BER] {
+ 	power BER
+ 	2.8 +5
+ 	3.0 +4
+ 	3.3 +2
+ 	3.6 +3
+ 	4.8 +1
+ 	6.1 +1
+ 	14.1 +0
+ 	23.7 +0
+ }; 
+ \end{axis}
+ \end{tikzpicture}
+\end{minipage}
+\end{figure}
+\begin{figure}
+	\centering
+	\begin{minipage}[b]{.45\columnwidth}
+ \begin{tikzpicture}[scale=0.8,line width=1pt]
+ \begin{axis}[
+ ytick={0,10,20,30,40,50,60,70,80,90,100,110},
+ %xtick={0,3.84,5.76,11.52,15.36,23.4},
+ %xtick={-110},
+ %title = bandwidth rapportato al throughput utente nelle varie TM,
+ title = Utilizzo cpu all' aumento del sample-rate,
+ grid style=dashed,
+ xlabel={Sample rate [Msps]},
+ ylabel={\% utilizzo cpu},
+ legend style={at={(0.7,0.02)},anchor=south west}
+ ]
+ %tm1
+ \addplot[
+ color=blue,
+ mark=x]
+ table[x=power,y=BER] {
+ 	power BER
+ 	0.1 +5
+ 	0.3 +12
+ 	0.5 +21
+ 	1.0 +45
+ 	1.5 +69
+ 	1.7 +79
+ 	1.8 +81
+ 	2.0 +89
+ 	3.0 +99
+ 	3.5 +102
+ 	4.0 +104
+ }; 
+ \end{axis}
+ \end{tikzpicture}
+\end{minipage}
+\centering
+\begin{minipage}[b]{.45\columnwidth}
+ \begin{tikzpicture}[scale=0.8,line width=1pt]
+ \begin{axis}[
+ ytick={0,2,4,6,8,10,12,14,16},
+ %xtick={0,3.84,5.76,11.52,15.36,23.4},
+ %xtick={-110},
+ %title = bandwidth rapportato al throughput utente nelle varie TM,
+ title = Utilizzo Usb all' aumento del sample-rate,
+ grid style=dashed,
+ xlabel={Sample rate [Msps]},
+ ylabel={Usb Mb/s},
+ legend style={at={(0.7,0.02)},anchor=south west}
+ ]
+ %tm1
+ \addplot[
+ color=blue,
+ mark=x]
+ table[x=power,y=BER] {
+ 	power BER
+ 	0.1 +0.4
+ 	0.3 +1
+ 	0.5 +2
+ 	1.0 +4
+ 	1.5 +6
+ 	1.7 +6.8
+ 	1.8 +7.2
+ 	2.0 +7.9
+ 	3.0 +12
+ 	3.5 +14
+ 	4.0 +15.2
+ }; 
+ \end{axis}
+ \end{tikzpicture}
+\end{minipage}
+\end{figure}
+ 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{audioRicevuto}
+	\caption{Confronto fra l'audio originale e quello ricevuto}
+\end{figure}
 

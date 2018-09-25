@@ -1,0 +1,7 @@
+\chapter{Conclusioni}
+\label{cha:conclusioni}
+
+Also, the worst performance issue with arithmetic cryptography like RSA is not about CPU, but about size. When you encrypt a piece of data with RSA, you get some overhead. E.g. with a 1024-bit RSA key, you can encrypt at most 117 bytes at a time, but this yields 128 bytes. When transmitting a long message, a fixed overhead of a few hundred bytes is much more tolerable than a +10\% size increase.
+
+CPU efficiency is often quoted as the reason we do hybrid encryption, but it is rarely as compelling as the two problems explained above.
+
