@@ -1,63 +1,65 @@
 \select@language {italian}
 \select@language {italian}
 \contentsline {chapter}{Sommario}{3}
-\contentsline {chapter}{\numberline {1}Introduzione sulle tecniche di trasmissione}{3}
-\contentsline {section}{\numberline {1.1}Modulazioni Analogiche}{4}
-\contentsline {subsection}{\numberline {1.1.1}AM (amplitude modulation): }{4}
-\contentsline {subsection}{\numberline {1.1.2}FM (frequency modulation): }{4}
-\contentsline {section}{\numberline {1.2}Modulazioni Digitali}{4}
-\contentsline {subsection}{\numberline {1.2.1}FSK (frequency shifting key): }{4}
-\contentsline {subsection}{\numberline {1.2.2}ASK (Amplitude shift keying): }{4}
-\contentsline {subsection}{\numberline {1.2.3}PSK (Phase Shift Keying): }{4}
-\contentsline {subsection}{\numberline {1.2.4}DPSK (Differential Phase Shift Keying): }{5}
-\contentsline {subsection}{\numberline {1.2.5}QAM (Quadrature amplitude modulation): }{5}
-\contentsline {chapter}{\numberline {2}OFDM (orthogonal frequency-division multiplexing): }{6}
-\contentsline {section}{\numberline {2.1}Principi di funzionamento}{6}
-\contentsline {subsection}{\numberline {2.1.1}Ortogonalit\IeC {\`a} delle sottoportanti: }{6}
-\contentsline {subsection}{\numberline {2.1.2}Tempi di guardia }{7}
-\contentsline {subsection}{\numberline {2.1.3}Equalizzazione}{7}
-\contentsline {subsection}{\numberline {2.1.4}Recupero degli errori}{7}
-\contentsline {subsubsection}{CRC (Cyclic Redundancy Check)}{8}
-\contentsline {subsubsection}{Convolutional Coding}{8}
-\contentsline {subsection}{\numberline {2.1.5}Sincronizzazione in frequenza}{8}
-\contentsline {section}{\numberline {2.2}Propriet\IeC {\`a} e campi di utilizzo}{9}
-\contentsline {chapter}{\numberline {3}SDR (Software Defined Radio)}{11}
-\contentsline {subsection}{\numberline {3.0.1}USRP (Universal Software Radio Peripheral)}{11}
-\contentsline {subsubsection}{Ettus USRP-B210}{12}
-\contentsline {subsection}{\numberline {3.0.2}RTL-SDR}{12}
-\contentsline {chapter}{\numberline {4}GNURADIO}{13}
-\contentsline {chapter}{\numberline {5}Crittografia RSA}{13}
-\contentsline {section}{\numberline {5.1}Caratteristiche}{14}
-\contentsline {subsection}{\numberline {5.1.1}Codifica asimmetrica con doppia chiave}{14}
-\contentsline {subsection}{\numberline {5.1.2}Algoritmo unico}{14}
-\contentsline {subsection}{\numberline {5.1.3}Chiavi intercambiabili}{14}
-\contentsline {subsection}{\numberline {5.1.4}Procedimento creazione chiave monodirezionale}{14}
-\contentsline {section}{\numberline {5.2}Algoritmo}{14}
-\contentsline {subsection}{\numberline {5.2.1}Generazione delle chiavi}{14}
-\contentsline {subsection}{\numberline {5.2.2}Cifratura}{14}
-\contentsline {subsection}{\numberline {5.2.3}Decifratura}{14}
-\contentsline {chapter}{\numberline {6}OFDM in Gnu Radio}{15}
-\contentsline {section}{\numberline {6.1}Trasmettitore}{15}
-\contentsline {subsection}{\numberline {6.1.1}Formazione pacchetti dal flusso in ingresso}{15}
-\contentsline {subsection}{\numberline {6.1.2}Codifica informazioni in Simboli}{16}
-\contentsline {subsection}{\numberline {6.1.3}Allocazione simboli sulle sottoportanti e creazione campioni per l'SDR}{16}
-\contentsline {subsection}{\numberline {6.1.4}Passaggio dati all'SDR}{16}
-\contentsline {section}{\numberline {6.2}Ricevitore}{16}
-\contentsline {subsection}{\numberline {6.2.1}Ricezione informazioni, sincronizzazione}{17}
-\contentsline {subsection}{\numberline {6.2.2}Equalizzazione e ottenimento simboli}{17}
-\contentsline {subsection}{\numberline {6.2.3}Decodifica payload e scrittura file}{18}
-\contentsline {section}{\numberline {6.3}Testing}{18}
-\contentsline {chapter}{\numberline {7}Implementazione Rsa in Gnuradio}{18}
-\contentsline {section}{\numberline {7.1}Sviluppo dei moduli}{19}
-\contentsline {subsection}{\numberline {7.1.1}Definizione propriet\IeC {\`a} moduli per l'ambiente grafico}{19}
-\contentsline {subsection}{\numberline {7.1.2}Algoritmo per cifratura e decifratura}{19}
-\contentsline {subsection}{\numberline {7.1.3}Codice di test}{20}
-\contentsline {subsection}{\numberline {7.1.4}Importazione in Gruradio}{20}
-\contentsline {chapter}{\numberline {8}Conclusioni}{21}
-\contentsline {chapter}{Sitografia}{22}
-\contentsline {chapter}{\numberline {A}Titolo primo allegato}{23}
-\contentsline {section}{\numberline {A.1}Titolo}{24}
-\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{24}
-\contentsline {chapter}{\numberline {B}Titolo secondo allegato}{24}
-\contentsline {section}{\numberline {B.1}Titolo}{24}
-\contentsline {subsection}{\numberline {B.1.1}Sottotitolo}{24}
+\contentsline {subsection}{\numberline {0.0.1}Contesto}{3}
+\contentsline {subsection}{\numberline {0.0.2}Obiettivo del lavoro}{3}
+\contentsline {subsection}{\numberline {0.0.3}Problematiche affrontate}{3}
+\contentsline {subsection}{\numberline {0.0.4}Organizzazione elaborato}{3}
+\contentsline {chapter}{\numberline {1}Tecniche di trasmissione}{5}
+\contentsline {section}{\numberline {1.1}Storia dello sviluppo}{5}
+\contentsline {section}{\numberline {1.2}Modulazioni Analogiche}{5}
+\contentsline {subsection}{\numberline {1.2.1}AM (Amplitude Modulation): }{5}
+\contentsline {subsection}{\numberline {1.2.2}FM (Frequency Modulation): }{5}
+\contentsline {subsection}{\numberline {1.2.3}PM (Phase Modulation): }{5}
+\contentsline {section}{\numberline {1.3}Modulazioni Digitali}{6}
+\contentsline {subsection}{\numberline {1.3.1}FSK (Frequency Shifting Key): }{6}
+\contentsline {subsection}{\numberline {1.3.2}ASK (Amplitude Shift Keying): }{6}
+\contentsline {subsection}{\numberline {1.3.3}PSK (Phase Shift Keying): }{6}
+\contentsline {subsection}{\numberline {1.3.4}DPSK (Differential Phase Shift Keying): }{6}
+\contentsline {subsection}{\numberline {1.3.5}QAM (Quadrature Amplitude Modulation): }{7}
+\contentsline {chapter}{\numberline {2}OFDM (Orthogonal Frequency-division Multiplexing): }{8}
+\contentsline {section}{\numberline {2.1}Principi di funzionamento}{8}
+\contentsline {subsection}{\numberline {2.1.1}Ortogonalit\IeC {\`a} delle sottoportanti: }{8}
+\contentsline {subsection}{\numberline {2.1.2}Tempi di guardia }{9}
+\contentsline {subsection}{\numberline {2.1.3}Equalizzazione}{9}
+\contentsline {subsection}{\numberline {2.1.4}Recupero degli errori}{9}
+\contentsline {subsubsection}{CRC (Cyclic Redundancy Check)}{10}
+\contentsline {subsubsection}{Convolutional Coding}{10}
+\contentsline {subsection}{\numberline {2.1.5}Sincronizzazione in frequenza}{10}
+\contentsline {section}{\numberline {2.2}Propriet\IeC {\`a} e campi di utilizzo}{11}
+\contentsline {chapter}{\numberline {3}SDR (Software Defined Radio)}{13}
+\contentsline {subsection}{\numberline {3.0.1}USRP (Universal Software Radio Peripheral)}{13}
+\contentsline {subsubsection}{Ettus USRP-B210}{14}
+\contentsline {subsection}{\numberline {3.0.2}RTL-SDR}{14}
+\contentsline {chapter}{\numberline {4}GNURADIO}{15}
+\contentsline {chapter}{\numberline {5}Crittografia RSA}{15}
+\contentsline {section}{\numberline {5.1}Caratteristiche}{16}
+\contentsline {subsection}{\numberline {5.1.1}Codifica asimmetrica con doppia chiave}{16}
+\contentsline {subsection}{\numberline {5.1.2}Algoritmo unico}{16}
+\contentsline {subsection}{\numberline {5.1.3}Chiavi intercambiabili}{16}
+\contentsline {subsection}{\numberline {5.1.4}Procedimento creazione chiave monodirezionale}{16}
+\contentsline {section}{\numberline {5.2}Algoritmo}{16}
+\contentsline {subsection}{\numberline {5.2.1}Generazione delle chiavi}{16}
+\contentsline {subsection}{\numberline {5.2.2}Cifratura}{16}
+\contentsline {subsection}{\numberline {5.2.3}Decifratura}{16}
+\contentsline {chapter}{\numberline {6}OFDM in Gnu Radio}{17}
+\contentsline {section}{\numberline {6.1}Trasmettitore}{17}
+\contentsline {subsection}{\numberline {6.1.1}Formazione pacchetti dal flusso in ingresso}{17}
+\contentsline {subsection}{\numberline {6.1.2}Codifica informazioni in Simboli}{18}
+\contentsline {subsection}{\numberline {6.1.3}Allocazione simboli sulle sottoportanti e creazione campioni per l'SDR}{18}
+\contentsline {subsection}{\numberline {6.1.4}Passaggio dati all'SDR}{18}
+\contentsline {section}{\numberline {6.2}Ricevitore}{19}
+\contentsline {subsection}{\numberline {6.2.1}Ricezione informazioni, sincronizzazione}{19}
+\contentsline {subsection}{\numberline {6.2.2}Equalizzazione e ottenimento simboli}{20}
+\contentsline {subsection}{\numberline {6.2.3}Decodifica payload e scrittura file}{20}
+\contentsline {section}{\numberline {6.3}Testing}{20}
+\contentsline {subsection}{\numberline {6.3.1}Caratteristiche generali del sistema sotto test}{20}
+\contentsline {subsection}{\numberline {6.3.2}Parametri specifici}{21}
+\contentsline {chapter}{\numberline {7}Implementazione Rsa in Gnuradio}{22}
+\contentsline {section}{\numberline {7.1}Sviluppo dei moduli}{22}
+\contentsline {subsection}{\numberline {7.1.1}Definizione propriet\IeC {\`a} moduli per l'ambiente grafico}{22}
+\contentsline {subsection}{\numberline {7.1.2}Algoritmo per cifratura e decifratura}{22}
+\contentsline {subsection}{\numberline {7.1.3}Codice di test}{23}
+\contentsline {subsection}{\numberline {7.1.4}Importazione in Gruradio}{24}
+\contentsline {chapter}{\numberline {8}Conclusioni}{25}
+\contentsline {chapter}{Sitografia}{25}

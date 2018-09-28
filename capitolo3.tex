@@ -1,6 +1,6 @@
 \chapter{Implementazione Rsa in Gnuradio}
 \label{cha:999}
-La seconda parte del lavoro svolto è stata qualla di valutare la possibilità dell'aggiunta di una criptografia RSA al sistema di trasmissione OFDM. Il primo passo è stato sviluppare un modulo che criptasse le informazioni passando poi all'implementazione di un secondo blocco per la decodifica. Le chiavi utilizzate non sono assolutamente sicure, sono state scelte piccole solo per rendere facile la comprensione del funzionamento. In un applicazione reale sono necessarie chiavi di almeno 1024bit.
+La seconda parte del lavoro svolto è stata qualla di valutare la possibilità dell'aggiunta di una criptografia RSA al sistema di trasmissione OFDM. Il primo passo è stato sviluppare un modulo che criptasse le informazioni passando poi all'implementazione di un secondo blocco per la decodifica. Le chiavi utilizzate non sono assolutamente sicure, sono state scelte piccole solo per rendere facile la comprensione e seguire il funzionamento. In un applicazione reale sono necessarie chiavi di almeno 1024bit.
 \section{Sviluppo dei moduli}
 Lo sviluppo dei moduli è diviso in tre parti fondamentali descritte in seguito, per la creazione dei file di supporto e l'importazione delle librerie necessarie Gnuradio mette a disposizione un tool chiamato gr\_moodtool utilizzabile da riga di comando.
 \subsection{Definizione proprietà moduli per l'ambiente grafico}

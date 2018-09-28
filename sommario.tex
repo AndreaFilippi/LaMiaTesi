@@ -3,20 +3,40 @@
 
 \addcontentsline{toc}{chapter}{Sommario} % da aggiungere comunque all'indice
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
+%  Sommario è un breve riassunto del lavoro svolto dove si %descrive l'obiettivo, l'oggetto della tesi, le 
+%metodologie e le tecniche usate, i dati elaborati e la %spiegazione delle conclusioni alle quali siete arrivati.  
+
+%Il sommario dell’elaborato consiste al massimo di 3 %pagine e deve contenere le seguenti informazioni:
+%\begin{itemize}
+%  \item contesto e motivazioni 
+%  \item breve riassunto del problema affrontato
+%  \item tecniche utilizzate e/o sviluppate
+%  \item risultati raggiunti, sottolineando il contributo %personale del laureando/a
+%\end{itemize}
+
+\subsection{Contesto}
+Lo sviluppo in software di apparati radio rappresenta un notevole passo in avanti nel mondo delle telecomunicazioni, finalmente è possibile programmare una scheda anzichè dover implementare circuiti dedicati. Un normale computer non è in grado da solo di trasmettere e ricevere segnali, per questo è necessario l' utilizzo di una scheda che permetta la conversione di onde elettromagnetiche in campioni e viceversa.
+Da anni sono disponibili varie tipologie di SDR sul mercato, il loro prezzo è ancora significamente elevato trovando utilizzo specialmente in laboratori e rendendone proibitivo l'utilizzo su larga scala. In questi ultimi anni le cose stanno iniziando a cambiare con la disponibilità di ricevitori SDR a ridotte prestazioni ma con costi stracciati.
+\subsection{Obiettivo del lavoro} obiettivo del lavoro svolto è proprio quello di osservare il comportamento di questi dispositivi low-cost in un ambiente di comunicazione avanzato cercando di evidenziare i loro limiti e le loro potenzialità.
+La scelta della tecnica di trasmissione per il lavoro è ricaduta su OFDM dato che viene largamente utilizzato per i sistemi di telecomunicazione odierni come ad esempio wifi, adsl, Powerline, televisione e radio digitali.
+Per l'implementazione è stato utilizzato l'ambiente open source Gnuradio che possiede tutti i requisiti per svolgere il lavoro desiderato. Infatti dispone di un insieme di blocchi appositi per l'implementazione di OFDM.
+Al fine di ottere una comunicazione funzionante e completa è stato necessario acquisire esperienza nell'ambiente Gnuradio che ha in seguito permesso la progettazione e la creazione di un prototipo composto da due blocchi aggiuntivi per la crittografia RSA.
+Il lavoro di documentazione sul funzionamento OFDM di trasmettitore e ricevitore è molto utile a mio avviso per integrare la poca documentazione disponibile in rete presente principalmente nella spiegazione sul sito ufficiale.
+\subsection{Problematiche affrontate}
+La scarsa disponibilità di documentazione su Gnuradio è stato senza dubbi l'ostacolo maggiore da affrontare. Prima di riuscire soltanto a simulare il trasferimento con la tecnica OFDM è stato necessario un grande sforzo e la conoscenza teorica del funzionamento.\\ Per l'utilizzo del ricevitore dvb-t/dab come SDR è necessario fare uso di un driver alternativi che hanno la tendenza a litigare con quello originale installato in automatico dal sistema operativo. Risolti questi problemi l'aggiunta in Gnuradio non ha rappresentato una grande dificoltà, è bastato prestare attenzione alla configurazione dei parametri affinché non superassero i vincoli dichiarati per il funzionamento.
+Per la parte che riguarda lo sviluppo dei due moduli per la crittografia sono state riscontrate problematiche relative a conflitti fra librerie già installate nel sistema, è stata richiesta molta pazienza per risolverli e poter finalmente aggiungere i moduli rsa all'ambiente Gnuradio.
+L'ultima problematica ha riguardato la fase di testing del sistema completo, il vincolo di rimanere nel piccolo laboratorio per utilizzare le apparecchiature ha influito negativamente sulla qualità e sulla tipologia dei test. Sarebbe stato interessante effettuare nuovamente i test in un ambiente aperto per vedere ad esempio quanto il fenomeno del "multipath propagation" abbia influito sulla perdita di informazioni.
+\subsection{Organizzazione elaborato}L'elaborato propone una documentazione teorica sulle modulazioni principali ponendo particolare attenzione alla tecnica OFDM utilizzata, successivamente viene introdotto il mondo degli SDR spiegando le differenze in termini tecnici fra le due tipologie di SDR utilizzati. In conclusione della sezione teorica viene brevemente discussa la codifica RSA riportando anche l'algoritmo. L'obiettivo è facilitare la comprensione della progettazione finale dei blocchi per la crittografia situata nell'ultima parte dello scritto.
+\\La sezione pratica comprende nella sua parte iniziale la documentazione sul funzionamento di OFDM nell'ambiente Gnuradio ordinata al fine di seguire il flusso logico delle informazioni attraverso tutto il loro percorso da sorgente a destinatario. Segue una sezione in merito ai risultati ottenuti.
+Viene successivamente documentata la procedura di creazione di nuovi blocchi in ambiente Gnuradio seguendo passo passo lo sviluppo dei due prototipi per l'aggiunta della crittografia RSA.
+\\
+Le problematiche di un integrazione nel sistema OFDM di questi blocchi vengono discusse nella sezione delle conclusioni assieme ai risultati ottenuti dagli SDR e i possibili sviluppi futuri del lavoro svolto.
 
 
-  Sommario è un breve riassunto del lavoro svolto dove si descrive l'obiettivo, l'oggetto della tesi, le 
-metodologie e le tecniche usate, i dati elaborati e la spiegazione delle conclusioni alle quali siete arrivati.  
 
-Il sommario dell’elaborato consiste al massimo di 3 pagine e deve contenere le seguenti informazioni:
-\begin{itemize}
-  \item contesto e motivazioni 
-  \item breve riassunto del problema affrontato
-  \item tecniche utilizzate e/o sviluppate
-  \item risultati raggiunti, sottolineando il contributo personale del laureando/a
-\end{itemize}
 
+
+\newpage
 
 
 

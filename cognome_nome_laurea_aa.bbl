@@ -50,7 +50,7 @@ Equalizzazione.
   \url{https://pdfs.semanticscholar.org/d8f6/7c4e4a42164bed115af4610d22adc78afec3.pdf}.
 
 \bibitem{FOOFDM}
-Frequencyoffsetofdm.
+Frequency-offset-ofdm.
 \newblock \url{https://openofdm.readthedocs.io/en/latest/freq_offset.html}.
 
 \bibitem{fsk}
@@ -86,6 +86,10 @@ Papr.
 Qam.
 \newblock
   \url{https://www.radio-electronics.com/info/rf-technology-design/quadrature-amplitude-modulation-qam/what-is-qam-tutorial.php}.
+
+\bibitem{qpsk}
+Qpsk.
+\newblock \url{http://tingegneria.altervista.org/88/}.
 
 \bibitem{brunato}
 Rsa.

@@ -6,6 +6,7 @@ Database file #1: biblio.bib
 Warning--to sort, need author or key in fsk
 Warning--to sort, need author or key in ask
 Warning--to sort, need author or key in digit
+Warning--to sort, need author or key in qpsk
 Warning--to sort, need author or key in dpsk
 Warning--to sort, need author or key in qam
 Warning--to sort, need author or key in psk-constellation
@@ -13,12 +14,12 @@ Warning--to sort, need author or key in ofdm
 Warning--to sort, need author or key in ofdm2
 Warning--to sort, need author or key in efficienzaSpettrale
 Warning--to sort, need author or key in ofdm-simboli
-Warning--to sort, need author or key in doppler
 Warning--to sort, need author or key in cp
 Warning--to sort, need author or key in equalizer
 Warning--to sort, need author or key in crc
 Warning--to sort, need author or key in cc
 Warning--to sort, need author or key in ofdmWiki
+Warning--to sort, need author or key in doppler
 Warning--to sort, need author or key in subcarriers
 Warning--to sort, need author or key in FOOFDM
 Warning--to sort, need author or key in papr
@@ -30,45 +31,45 @@ Warning--to sort, need author or key in rtlsdr
 Warning--to sort, need author or key in brunato
 Warning--to sort, need author or key in rsa
 Warning--to sort, need author or key in frequenze
-You've used 27 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            581 strings with 6571 characters,
-and the built_in function-call counts, 4315 in all, are:
-= -- 405
-> -- 27
+            584 strings with 6624 characters,
+and the built_in function-call counts, 4474 in all, are:
+= -- 420
+> -- 28
 < -- 0
-+ -- 27
++ -- 28
 - -- 0
-* -- 137
-:= -- 470
-add.period$ -- 54
-call.type$ -- 27
-change.case$ -- 81
+* -- 142
+:= -- 487
+add.period$ -- 56
+call.type$ -- 28
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 189
-empty$ -- 622
+cite$ -- 56
+duplicate$ -- 196
+empty$ -- 645
 format.name$ -- 0
-if$ -- 1081
+if$ -- 1121
 int.to.chr$ -- 0
-int.to.str$ -- 27
+int.to.str$ -- 28
 missing$ -- 0
-newline$ -- 111
+newline$ -- 115
 num.names$ -- 0
-pop$ -- 216
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 56
 quote$ -- 0
-skip$ -- 215
+skip$ -- 223
 stack$ -- 0
-substring$ -- 135
-swap$ -- 27
+substring$ -- 140
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
-warning$ -- 27
+type$ -- 112
+warning$ -- 28
 while$ -- 0
-width$ -- 29
-write$ -- 191
-(There were 27 warnings)
+width$ -- 30
+write$ -- 198
+(There were 28 warnings)
