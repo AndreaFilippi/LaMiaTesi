@@ -31,45 +31,46 @@ Warning--to sort, need author or key in rtlsdr
 Warning--to sort, need author or key in brunato
 Warning--to sort, need author or key in rsa
 Warning--to sort, need author or key in frequenze
-You've used 28 entries,
+Warning--to sort, need author or key in dataloss
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            584 strings with 6624 characters,
-and the built_in function-call counts, 4474 in all, are:
-= -- 420
-> -- 28
+            586 strings with 6679 characters,
+and the built_in function-call counts, 4633 in all, are:
+= -- 435
+> -- 29
 < -- 0
-+ -- 28
++ -- 29
 - -- 0
-* -- 142
-:= -- 487
-add.period$ -- 56
-call.type$ -- 28
-change.case$ -- 84
+* -- 147
+:= -- 504
+add.period$ -- 58
+call.type$ -- 29
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 196
-empty$ -- 645
+cite$ -- 58
+duplicate$ -- 203
+empty$ -- 668
 format.name$ -- 0
-if$ -- 1121
+if$ -- 1161
 int.to.chr$ -- 0
-int.to.str$ -- 28
+int.to.str$ -- 29
 missing$ -- 0
-newline$ -- 115
+newline$ -- 119
 num.names$ -- 0
-pop$ -- 224
+pop$ -- 232
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 58
 quote$ -- 0
-skip$ -- 223
+skip$ -- 231
 stack$ -- 0
-substring$ -- 140
-swap$ -- 28
+substring$ -- 145
+swap$ -- 29
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
-warning$ -- 28
+type$ -- 116
+warning$ -- 29
 while$ -- 0
-width$ -- 30
-write$ -- 198
-(There were 28 warnings)
+width$ -- 31
+write$ -- 205
+(There were 29 warnings)

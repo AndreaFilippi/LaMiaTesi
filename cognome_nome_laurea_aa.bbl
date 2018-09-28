@@ -25,6 +25,10 @@ Crc.
 cyclic-prefix.
 \newblock \url{http://www.sharetechnote.com/html/Communication_OFDM.html}.
 
+\bibitem{dataloss}
+dataloss.
+\newblock \url{https://en.wikipedia.org/wiki/Packet_loss}.
+
 \bibitem{sdrDiagram}
 Diagramma-sdr.
 \newblock
@@ -114,7 +118,7 @@ Sdr-software.
 \newblock \url{https://www.wimo.com/elad-fdm-duo-sdr-transceiver_e.html}.
 
 \bibitem{ofdm-simboli}
-sottoportanti-ofdm.
+Sottoportanti-ofdm.
 \newblock \url{https://www.webnews.it/2008/11/24/tecnica-ofdm/}.
 
 \bibitem{subcarriers}
