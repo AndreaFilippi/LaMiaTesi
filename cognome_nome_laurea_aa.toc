@@ -4,7 +4,7 @@
 \contentsline {subsection}{\numberline {0.0.1}Contesto}{3}
 \contentsline {subsection}{\numberline {0.0.2}Obiettivo del lavoro}{3}
 \contentsline {subsection}{\numberline {0.0.3}Problematiche affrontate}{3}
-\contentsline {subsection}{\numberline {0.0.4}Organizzazione elaborato}{3}
+\contentsline {subsection}{\numberline {0.0.4}Organizzazione dell'elaborato}{3}
 \contentsline {chapter}{\numberline {1}Tecniche di trasmissione}{5}
 \contentsline {section}{\numberline {1.1}Storia dello sviluppo}{5}
 \contentsline {section}{\numberline {1.2}Modulazioni Analogiche}{5}
