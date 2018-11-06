@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<block>
+  <name>rsaTX_py_bf</name>
+  <key>rsa_rsaTX_py_bf</key>
+  <category>[rsa]</category>
+  <import>import rsa</import>
+  <make>rsa.rsaTX_py_bf($e, $n)</make>
+
+  <param>
+    <name>e</name>
+    <key>e</key>
+    <type>int</type>
+    <hide>none</hide>
+  </param>
+  
+  <param>
+    <name>n</name>
+    <key>n</key>
+    <type>int</type>
+    <hide>none</hide>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>int</type>
+  </source>
+
+</block>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<block>
+  <name>rsaRx_py_fb</name>
+  <key>rsaRx_rsaRx_py_fb</key>
+  <category>[rsaRx]</category>
+  <import>import rsaRx</import>
+  <make>rsaRx.rsaRx_py_fb($d, $n)</make>
+
+  <param>
+    <name>d</name>
+    <key>d</key>
+    <type>int</type>
+    <hide>none</hide>
+  </param>
+
+  <param>
+    <name>n</name>
+    <key>n</key>
+    <type>int</type>
+    <hide>none</hide>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>int</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
