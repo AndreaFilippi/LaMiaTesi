@@ -10,5 +10,7 @@ In questo repository è possibile trovare tutto il materiale utilizzato per la s
 
 
 Visto che la mia tesi si basa su piattaforme libere e software Open Source ho deciso di pubblicare tutti i file del mio lavoro. <br />
+<br />
 Spero possa essere utile a qualcuno, <br />
+<br />
 Andrea Filippi.
