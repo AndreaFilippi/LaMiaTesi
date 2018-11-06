@@ -8,7 +8,7 @@ In questo repository è possibile trovare tutto il materiale utilizzato per la s
 2.  Il frontespizio Word serve alle copisterie per stampare la copertina su pelle.
 3.  La presentazione mostrata il giorno della discussione compresa di slide di backup
 4.  Una scaletta molto grezza iniziale sul discorso che ho fatto
-
+5.  File utilizzati nel lavoro svolto, tutti nella cartella "lavoro" e suddivisi fra la comunicazione con l'SDR e il codice dei blocchi rsa
 
 Visto che la mia tesi si basa su piattaforme libere e software Open Source ho deciso di pubblicare tutti i file del mio lavoro. <br />
 <br />
