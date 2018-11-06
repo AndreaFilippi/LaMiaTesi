@@ -1,4 +1,5 @@
-# PoorManThesis
+# Tesi di Laurea in Informatica
+Università di Trento (11 ottobre 2018)
 
 In questo repository è possibile trovare tutto il materiale utilizzato per la scrittura della mia tesi :
 
